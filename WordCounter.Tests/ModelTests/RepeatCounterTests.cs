@@ -19,7 +19,6 @@ namespace WordCounter.Tests
         }
 
 
-
         [TestMethod]
 
         public void CountWords_CountsWordsInSentence_1()
@@ -28,6 +27,15 @@ namespace WordCounter.Tests
             string sentence = "I want to go running in the moring";
             Count testInstance = new Count(word, sentence);
             Assert.AreEqual(1, testInstance.Counter);
+        }
+
+
+        [TestMethod]
+        public void RemoveSpecialChars_RemovesAllSpecialChars_String()
+        {
+            string sentence = "Hello there Frank, how are you?";
+            string result = "hello there frank how are you";
+            Assert.AreEqual(result, Count.RemoveSpecialChars(sentence));
         }
 
         
