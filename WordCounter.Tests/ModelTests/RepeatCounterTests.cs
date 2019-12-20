@@ -6,16 +6,31 @@ using System;
 namespace WordCounter.Tests
 {
     [TestClass]
-    public class CountTest
+    public class CountTest 
     {
+
         [TestMethod]
-        public void RepCountConstructor_CreateInstanceOfRepCount_RepeatCounter()
+        public void CountConstructor_CreateInstanceOfRepCount_RepeatCounter()
         {
-            string word1 = "dog";
-            string sentence1 = "How are you today?";
-            Count rcTest = new Count(word1, sentence1);
+            string word = "dog";
+            string sentence = "How are you today?";
+            Count rcTest = new Count(word, sentence);
             Assert.AreEqual(typeof(Count), rcTest.GetType());
         }
+
+
+
+        [TestMethod]
+
+        public void CountWords_CountsWordsInSentence_1()
+        {
+            string word = "running";
+            string sentence = "I want to go running in the moring";
+            Count testInstance = new Count(word, sentence);
+            Assert.AreEqual(1, testInstance.Counter);
+        }
+
+        
 
     }
 }
