@@ -4,8 +4,8 @@ namespace WordCounter.Models
 {
     public class Count
     {
-        string Word { get; set; }
-        string Sentence { get; set; }
+        public string Word { get; set; }
+        public string Sentence { get; set; }
 
         public Count(string word, string sentence)
         {
