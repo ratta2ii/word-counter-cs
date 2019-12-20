@@ -6,18 +6,33 @@ namespace WordCounter.Models
     {
         public static void Main()
         {
-            Console.WriteLine("Hello World!");
+            // Console.WriteLine("Hello World!");
 
-            Console.Write("Please enter a single word.");
-            string word1 = Console.ReadLine();
-            Console.Write("Please enter a complete sentence.");
-            string sentence1 = Console.ReadLine();
-            Console.WriteLine("----------------------------------");
+            // Console.Write("Please enter a single word.");
+            // string word1 = Console.ReadLine();
+            // Console.Write("Please enter a complete sentence.");
+            // string sentence1 = Console.ReadLine();
+            // Console.WriteLine("----------------------------------");
 
-            Count example1 = new Count(word1, sentence1);
-            Console.WriteLine($"I am the example1 instance: {example1}");
-            Console.WriteLine($"I a am the instance word: {example1.Word}");
-            Console.WriteLine($"I am the instance sentence: {example1.Sentence}");
+            // Count example1 = new Count(word1, sentence1);
+            // Console.WriteLine($"I am the example1 instance: {example1}");
+            // Console.WriteLine($"I a am the instance word: {example1.Word}");
+            // Console.WriteLine($"I am the instance sentence: {example1.Sentence}");
+
+            // Console.WriteLine("----------------------------------");
+            // Console.WriteLine($"I am the CountWords() results: {example1.CountWords()}");
+            
+        const string s = "peace; I am going , . this?";
+        foreach (char c in s)
+        {
+            if (c == '.' || c == '?' || c == ',')
+            {
+                s.Remove(c);
+            }
+            Console.WriteLine(s);
+        }
+        
+
 
         
         }
