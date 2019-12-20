@@ -5,36 +5,33 @@ namespace WordCounter.Models
     public class Program 
     {
         public static void Main()
-        {
-            // Console.WriteLine("Hello World!");
+        {   
+            string word = CheckInput();
+            Console.WriteLine("Please enter a complete sentence.");
+            string sentence = Console.ReadLine();
+            Console.WriteLine("----------------------------------");
 
-            // Console.Write("Please enter a single word.");
-            // string word1 = Console.ReadLine();
-            // Console.Write("Please enter a complete sentence.");
-            // string sentence1 = Console.ReadLine();
-            // Console.WriteLine("----------------------------------");
+            Count example1 = new Count(word, sentence);
+           
 
-            // Count example1 = new Count(word1, sentence1);
-            // Console.WriteLine($"I am the example1 instance: {example1}");
-            // Console.WriteLine($"I a am the instance word: {example1.Word}");
-            // Console.WriteLine($"I am the instance sentence: {example1.Sentence}");
-
-            // Console.WriteLine("----------------------------------");
-            // Console.WriteLine($"I am the CountWords() results: {example1.CountWords()}");
-            
-        const string s = "peace; I am going , . this?";
-        foreach (char c in s)
-        {
-            if (c == '.' || c == '?' || c == ',')
-            {
-                s.Remove(c);
-            }
-            Console.WriteLine(s);
+            example1.CountWords();
+            Console.WriteLine(example1.Counter);
         }
-        
 
-
-        
+        public static string CheckInput()
+        {
+            string word = "";
+            Console.WriteLine("Please enter a single word.");
+            word = Console.ReadLine();
+            char[] wordArray = word.ToCharArray();
+            bool result = word.All(Char.IsLetter);
+            if (!result)
+            {
+                word = "";
+                return CheckInput();
+            }
+            return word;
         }
     }
 }
+
