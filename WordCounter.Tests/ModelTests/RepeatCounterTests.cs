@@ -26,6 +26,7 @@ namespace WordCounter.Tests
             string word = "running";
             string sentence = "I want to go running in the moring";
             Count testInstance = new Count(word, sentence);
+            testInstance.CountWords();
             Assert.AreEqual(1, testInstance.Counter);
         }
 
@@ -37,8 +38,7 @@ namespace WordCounter.Tests
             string result = "hello there frank how are you";
             Assert.AreEqual(result, Count.RemoveSpecialChars(sentence));
         }
-
-        
+            
 
     }
 }
