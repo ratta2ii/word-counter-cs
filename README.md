@@ -4,7 +4,7 @@
 
 ### **Description**
 
-_This is a console application built in C#. The program will gather both a word and a sentence from a user. It will then check how frequently the word appears in the sentence. It should check for full word matches only. (For instance, if provided the word "cat" and sentence "I'm walking to the cathedral." the first three letters of the word cathedral would not be counted.)_
+_This is a console application built in C#. The program will gather both a word and a sentence from a user. It will then check how frequently the word appears in the sentence. The program should check for full word matches only. 
 
 
 #
