@@ -1,8 +1,8 @@
 using System;
 
-namespace RepeatCounter.Models
+namespace WordCounter.Models
 {
-    public class RepeatCounter
+    public class Count
     {
         
     }
