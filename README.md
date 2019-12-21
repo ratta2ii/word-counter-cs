@@ -4,7 +4,7 @@
 
 ### **Description**
 
-_This is a console application built in C#. The program will gather both a word and a sentence from a user. It will then check how frequently the word appears in the sentence. The program should check for full word matches only. 
+_This is a console application built in C#. The program will gather both a word and a sentence from a user. It will then check how frequently the word appears in the sentence. The program should check for full word matches only._ 
 
 
 #
