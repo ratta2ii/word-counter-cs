@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 
 namespace WordCounter.Models
 {
@@ -6,32 +7,42 @@ namespace WordCounter.Models
     {
         public static void Main()
         {   
-            string word = CheckInput();
-            Console.WriteLine("Please enter a complete sentence.");
-            string sentence = Console.ReadLine();
-            Console.WriteLine("----------------------------------");
+          string wordInput = CheckInput();
+          Console.WriteLine("Please enter a complete sentence.");
+          string sentenceInput = Console.ReadLine();
+          Console.WriteLine("----------------------------------");
 
-            Count example1 = new Count(word, sentence);
-           
-
-            example1.CountWords();
-            Console.WriteLine(example1.Counter);
+          Count firstInstance = new Count(wordInput, sentenceInput);
+        
+          firstInstance.CountWords();
+          Console.WriteLine(firstInstance.Counter);
         }
 
         public static string CheckInput()
         {
-            string word = "";
+            string finalWord = "";
             Console.WriteLine("Please enter a single word.");
-            word = Console.ReadLine();
+            string word = Console.ReadLine();
             char[] wordArray = word.ToCharArray();
-            bool result = word.All(Char.IsLetter);
-            if (!result)
+            foreach(char c in wordArray)
             {
-                word = "";
-                return CheckInput();
+                if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == '\'')
+                {
+                    finalWord += c;
+                }
+                
+                else 
+                {
+                    finalWord = "";  
+                    return CheckInput(); 
+                }           
             }
-            return word;
+            return finalWord;
         }
+
     }
+
 }
+
+
 
